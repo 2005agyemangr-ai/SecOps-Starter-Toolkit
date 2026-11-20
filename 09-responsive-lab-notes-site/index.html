@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Notes & Study Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Lab Notes &amp; Study Hub</h1>
+      <p class="subtitle">Organize hands-on labs, architecture notes, and security writeups.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Add a Study Note</h2>
+      <form id="note-form" class="note-form">
+        <input type="text" id="note-title" placeholder="Topic or lab title..." required />
+        <select id="note-tag" aria-label="Category">
+          <option value="Networking">Networking</option>
+          <option value="Web">Web</option>
+          <option value="Security">Security</option>
+          <option value="Databases">Databases</option>
+        </select>
+        <button type="submit">Save Note</button>
+      </form>
+    </section>
+
+    <section class="controls">
+      <div id="filter-bar" class="filter-bar">
+        <button data-filter="All" class="active">All</button>
+        <button data-filter="Networking">Networking</button>
+        <button data-filter="Web">Web</button>
+        <button data-filter="Security">Security</button>
+        <button data-filter="Databases">Databases</button>
+      </div>
+    </section>
+
+    <section id="notes-list" class="notes-grid" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
