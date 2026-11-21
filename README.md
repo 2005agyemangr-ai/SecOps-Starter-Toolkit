@@ -18,7 +18,6 @@ A single repository grouping ten self-contained starter utilities and labs cover
 ## Responsible Use
 
 Only run network or HTTP header inspection scripts against systems and endpoints you own or are explicitly authorized to test.
-=======
 # SecOps-Starter-Tookit
 Starter collection of defensive security, network auditing, log analysis, file integrity, and foundational IT/coding labs.
 
