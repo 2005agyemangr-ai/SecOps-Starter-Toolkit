@@ -8,4 +8,7 @@ python3 app.py
 # Test endpoints:
 # curl -s http://127.0.0.1:8080/tasks | jq
 # curl -s -X POST http://127.0.0.1:8080/tasks -H "Content-Type: application/json" -d '{"title":"Finish INF 215 lab"}'
+curl -s -X PATCH http://127.0.0.1:8080/tasks/1 -H "Content-Type: application/json" -d '{"status":"completed"}'
+curl -s http://127.0.0.1:8080/tasks/1
+curl -s -X DELETE http://127.0.0.1:8080/tasks/1
 ```

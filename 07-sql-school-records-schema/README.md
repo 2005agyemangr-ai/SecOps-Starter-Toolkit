@@ -1,6 +1,6 @@
 # School Records SQLite Schema & Queries
 
-A normalized SQLite relational schema for managing students, courses, enrollments, and attendance records, complete with sample seed data and analytical SQL queries.
+A normalized SQLite relational schema for managing students, courses, and enrollments, complete with sample seed data and a GPA query.
 
 ## Quick Run
 ```bash

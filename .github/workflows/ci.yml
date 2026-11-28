@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Compile Python sources
+        run: python -m compileall -q -x '(__pycache__|\.git)' .
+      - name: Run unit tests
+        run: |
+          python -m unittest discover -s 06-tower-of-hanoi-and-hashtable-lab/tests -p 'test_*.py' -v
+          python -m unittest discover -s 08-student-task-tracker-api -p 'test_*.py' -v
